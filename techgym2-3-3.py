@@ -1,6 +1,7 @@
 import random
 
 level = 1
+
 def start_message():
   print('違う漢字の番号(例:A1)を入力してください')
 

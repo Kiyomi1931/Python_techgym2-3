@@ -12,13 +12,21 @@ def section_message():
 def view_question():
   choice_data = random.randint(0, 2)
   question = data[choice_data]
+  another_moji_number = random.randint(0,8)
   print(question)
+  print(another_moji_number)
+
   i = 0
   j = 0
+  count_number = 0
   while i < 3:
     question_str = ''
     while j < 3:
-      question_str += question[0]
+      if count_number == another_moji_number:
+        question_str += question[1]
+      else:
+        question_str += question[0]
+      count_number += 1
       j += 1
     print(question_str)
     i += 1

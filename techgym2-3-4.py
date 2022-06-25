@@ -14,6 +14,18 @@ def view_question():
   question = data[choice_data]
   print(question)
 
+  tate=0
+  yoko=0
+
+  while tate<3:
+    question_str=''
+    while yoko<3:
+      question_str+=question[0]
+      yoko+=1
+    print(question_str)
+    yoko=0
+    tate+=1
+
 def play():
   section_message()
   view_question()

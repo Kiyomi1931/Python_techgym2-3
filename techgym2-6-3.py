@@ -11,22 +11,19 @@ def section_message():
 
 def view_question():
   choice_data = random.randint(0, 2)
+  mistake_number = random.randint(0, 8)
+  print('デバッグ:mistake_number = ' + str(mistake_number))
   question = data[choice_data]
-  another_moji_number = random.randint(0,8)
   print(question)
-  # print(another_moji_number) 動作確認用のため。
-
   i = 0
   j = 0
-  count_number = 0
   while i < 3:
     question_str = ''
     while j < 3:
-      if count_number == another_moji_number:
+      if (i * 3 + j) == mistake_number:
         question_str += question[1]
       else:
         question_str += question[0]
-      count_number += 1
       j += 1
     print(question_str)
     i += 1

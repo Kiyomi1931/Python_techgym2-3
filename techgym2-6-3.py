@@ -17,8 +17,10 @@ def view_question():
   print(question)
   i = 0
   j = 0
+  print('/| A B C')
+  print('--------')
   while i < 3:
-    question_str = ''
+    question_str = str(i) + '|'+''
     while j < 3:
       if (i * 3 + j) == mistake_number:
         question_str += question[1]

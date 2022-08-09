@@ -31,11 +31,20 @@ def view_question():
     i += 1
     j = 0
 
+def change_input_number(input_str):
+  moji_change = {'A':0,'B':1,'C':2}
+  input_str1 = int(moji_change[input_str[0]])
+  input_str2 = int(input_str[1])-1
+  input_number = input_str2*3 + input_str1 
+  return input_number
+
 def play():
   section_message()
   view_question()
   choice = input('(例:A1)')
   print('デバッグ:choice = ' + choice)
+  input_number = change_input_number(choice)
+  print('デバッグ:input_number' + str(input_number))
 
 start_message()
 play()

@@ -58,7 +58,7 @@ def play():
   print('デバッグ:choice = ' + choice)
   input_number = change_input_number(choice)
   print('デバッグ:input_number = ' + str(input_number))
-  result = is_correct_number(correct_number,choice)
+  result = is_correct_number(correct_number,input_number)
   view_result(result)
 
 start_message()

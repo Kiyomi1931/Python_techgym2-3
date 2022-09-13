@@ -4,7 +4,7 @@ import math
 data = [['見','貝'], ['土','士'], ['眠','眼']]
 level = 1
 col = 5
-row =4
+row = 4
 
 def start_message():
   print('違う漢字の番号(例:A1)を入力してください')
@@ -14,7 +14,7 @@ def section_message():
 
 def view_question():
   choice_data = random.randint(0, 2)
-  mistake_number = random.randint(0, col*row-1)
+  mistake_number = random.randint(0, (col * row) - 1 )
   print('デバッグ:mistake_number = ' + str(mistake_number))
   question = data[choice_data]
   print(question)
@@ -36,7 +36,7 @@ def view_question():
   return mistake_number
 
 def change_input_number(input_str):
-  str_data = { 'A':0, 'B':1, 'C':2,'D':3, 'E':4, 'F':5,'G':6, 'H':7, 'I':8 }
+  str_data = { 'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'G':6, 'H':7, 'I':8 }
   input_str_split = list(input_str)
   col_number = str_data[input_str_split[0]]
   row_number = int(input_str_split[1]) - 1
@@ -57,7 +57,7 @@ def view_result(is_correct, mistake_number):
     print('正解は ' + change_string(mistake_number))
 
 def change_string(number):
-  number_data = ['A', 'B', 'C','D', 'E', 'F','G', 'H', 'I']
+  number_data = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
   col_number = number % col
   row_number = math.floor(number / col) + 1
   string = number_data[col_number] + str(row_number)

@@ -21,10 +21,8 @@ def view_question():
   print(question)
   i = 0
   j = 0
-  
-  question_str1='／｜'
-  question_str2='ーー'
-
+  question_str1 = '／｜'
+  question_str2 = 'ーー'
   while i < col:
     question_str1 += number_data[i] + ' '
     question_str2 += 'ー'
@@ -44,7 +42,6 @@ def view_question():
     i += 1
     j = 0
   return mistake_number
-
 
 def change_input_number(input_str):
   str_data = { 'A':0, 'B':1, 'C':2, 'D':3, 'E':4, 'F':5, 'G':6, 'H':7, 'I':8 }
